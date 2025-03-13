@@ -243,6 +243,12 @@ class AnthropicClient:
     def __init__(self):
         self.client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
         self.model = os.environ.get("MODEL_NAME", "claude-3-7-sonnet-20250219")
+        """
+        claude-3-opus-20240229
+        claude-3-sonnet-20240229
+        claude-3-haiku-20240307
+        claude-3-5-sonnet-20240620
+        """
     
     def generate_response(self, prompt, conversation_history=None):
         if conversation_history is None:
